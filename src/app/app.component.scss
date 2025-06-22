@@ -1,0 +1,112 @@
+/* Estilos generales */
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.business-card {
+  max-width: 800px;
+  border-radius: 15px;
+  overflow: hidden;
+  // border: none;
+}
+
+/* Estilos del logo */
+.logo-container {
+  width: 100%;
+  text-align: center;
+}
+
+.company-logo {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+/* Estilos del texto */
+
+.company-name {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700; /* Usará Orbitron-Bold */
+  font-size: 1.8rem;
+  color: #3498db;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  white-space: nowrap; /* Evita el salto de línea */
+  overflow: hidden; /* Oculta el texto que desborde */
+  text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es muy largo */
+  max-width: 100%; /* Asegura que no exceda el ancho disponible */
+  /* Efecto adicional para parecerse más a Eurostile */
+  text-shadow: 0.5px 0 0 currentColor; /* Sutil efecto de grosor */
+}
+.person-name {
+  color: #34495e;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.person-position {
+  font-size: 1rem;
+}
+
+.contact-info {
+  font-size: 0.95rem;
+}
+
+.contact-info i {
+  color: #3498db;
+  width: 20px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .business-card {
+    max-width: 90%;
+  }
+
+  .company-name {
+    font-size: 1.5rem;
+    white-space: normal; /* Permite salto de línea en móviles si es necesario */
+    text-overflow: clip; /* Quita los puntos suspensivos */
+  }
+
+  .person-name {
+    font-size: 1.2rem;
+  }
+
+  .company-logo {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .card-body {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .business-card {
+    max-width: 95%;
+  }
+
+  .company-name {
+    font-size: 1.3rem;
+  }
+
+  .person-name {
+    font-size: 1.1rem;
+  }
+
+  .contact-info {
+    font-size: 0.85rem;
+  }
+
+  .company-logo {
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
