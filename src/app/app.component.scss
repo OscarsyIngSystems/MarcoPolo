@@ -1,32 +1,148 @@
+// /* Estilos generales */
+// .min-vh-100 {
+//   min-height: 100vh;
+// }
+
+// .business-card {
+//   max-width: 800px;
+//   border-radius: 15px;
+//   overflow: hidden;
+//   // border: none;
+// }
+
+// /* Estilos del logo */
+// .logo-container {
+//   width: 100%;
+//   text-align: center;
+// }
+
+// .company-logo {
+//   max-width: 200px;
+//   max-height: 200px;
+//   object-fit: contain;
+// }
+
+// /* Estilos del texto */
+
+// .company-name {
+//   font-family: "Orbitron", sans-serif;
+//   font-weight: 700; /* Usará Orbitron-Bold */
+//   font-size: 1.8rem;
+//   color: #3498db;
+//   text-transform: uppercase;
+//   letter-spacing: 1.5px;
+//   margin-bottom: 1.5rem;
+//   border-bottom: 2px solid #3498db;
+//   padding-bottom: 0.5rem;
+//   display: inline-block;
+//   // white-space: nowrap; /* Evita el salto de línea */
+//   // overflow: hidden; /* Oculta el texto que desborde */
+//   // text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es muy largo */
+//   // max-width: 100%; /* Asegura que no exceda el ancho disponible */
+//   /* Efecto adicional para parecerse más a Eurostile */
+//   text-shadow: 0.5px 0 0 currentColor; /* Sutil efecto de grosor */
+// }
+// .person-name {
+//   color: #34495e;
+//   font-weight: 600;
+//   font-size: 1.4rem;
+// }
+
+// .person-position {
+//   font-size: 1rem;
+// }
+
+// .contact-info {
+//   font-size: 0.95rem;
+// }
+
+// .contact-info i {
+//   color: #3498db;
+//   width: 20px;
+//   text-align: center;
+// }
+
+// /* Responsive adjustments */
+// @media (max-width: 768px) {
+//   .business-card {
+//     max-width: 90%;
+//   }
+
+//   .company-name {
+//     font-size: 1.5rem;
+//     white-space: normal; /* Permite salto de línea en móviles si es necesario */
+//     text-overflow: clip; /* Quita los puntos suspensivos */
+//   }
+
+//   .person-name {
+//     font-size: 1.2rem;
+//   }
+
+//   .company-logo {
+//     max-width: 100px;
+//     max-height: 100px;
+//   }
+
+//   .card-body {
+//     padding: 1.5rem !important;
+//   }
+// }
+
+// @media (max-width: 576px) {
+//   .business-card {
+//     max-width: 95%;
+//   }
+
+//   .company-name {
+//     font-size: 1.3rem;
+//   }
+
+//   .person-name {
+//     font-size: 1.1rem;
+//   }
+
+//   .contact-info {
+//     font-size: 0.85rem;
+//   }
+
+//   .company-logo {
+//     max-width: 80px;
+//     max-height: 80px;
+//   }
+// }
+
 /* Estilos generales */
 .min-vh-100 {
   min-height: 100vh;
+  padding: 15px; /* Añade padding para evitar pegado a bordes */
 }
 
 .business-card {
   max-width: 800px;
   border-radius: 15px;
   overflow: hidden;
-  // border: none;
+  margin: 0 auto; /* Centra la tarjeta */
 }
 
 /* Estilos del logo */
 .logo-container {
+  /* Corregí el typo (logO-container) */
   width: 100%;
   text-align: center;
+  padding: 20px;
 }
 
 .company-logo {
+  width: 100%;
   max-width: 200px;
-  max-height: 200px;
+  height: auto;
   object-fit: contain;
 }
 
 /* Estilos del texto */
-
 .company-name {
   font-family: "Orbitron", sans-serif;
-  font-weight: 700; /* Usará Orbitron-Bold */
+  font-weight: 700;
   font-size: 1.8rem;
   color: #3498db;
   text-transform: uppercase;
@@ -34,71 +150,104 @@
   margin-bottom: 1.5rem;
   border-bottom: 2px solid #3498db;
   padding-bottom: 0.5rem;
-  display: inline-block;
-  // white-space: nowrap; /* Evita el salto de línea */
-  // overflow: hidden; /* Oculta el texto que desborde */
-  // text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es muy largo */
-  // max-width: 100%; /* Asegura que no exceda el ancho disponible */
-  /* Efecto adicional para parecerse más a Eurostile */
-  text-shadow: 0.5px 0 0 currentColor; /* Sutil efecto de grosor */
+  display: block;
+  word-break: keep-all; /* Evita división de palabras */
 }
+
 .person-name {
   color: #34495e;
   font-weight: 600;
   font-size: 1.4rem;
+  margin-bottom: 0.25rem;
 }
 
 .person-position {
   font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
 }
 
 .contact-info {
   font-size: 0.95rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-info li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
 }
 
 .contact-info i {
   color: #3498db;
   width: 20px;
   text-align: center;
+  margin-right: 10px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Ajustes para tablets */
+@media (max-width: 992px) {
   .business-card {
     max-width: 90%;
   }
 
   .company-name {
-    font-size: 1.5rem;
-    white-space: normal; /* Permite salto de línea en móviles si es necesario */
-    text-overflow: clip; /* Quita los puntos suspensivos */
-  }
-
-  .person-name {
-    font-size: 1.2rem;
-  }
-
-  .company-logo {
-    max-width: 100px;
-    max-height: 100px;
-  }
-
-  .card-body {
-    padding: 1.5rem !important;
+    font-size: 1.6rem;
   }
 }
 
-@media (max-width: 576px) {
+/* Ajustes para móviles en ambas orientaciones */
+@media (max-width: 768px) {
   .business-card {
-    max-width: 95%;
+    max-width: 100%;
+    margin: 15px;
+  }
+
+  .row.g-0 {
+    flex-direction: column;
+  }
+
+  .col-md-4,
+  .col-md-8 {
+    width: 100%;
+  }
+
+  .company-logo {
+    max-width: 150px;
+    max-height: 150px;
   }
 
   .company-name {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .card-body {
+    padding: 1.25rem !important;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: left;
+    display: inline-block;
+  }
+}
+
+/* Ajustes para móviles pequeños */
+@media (max-width: 576px) {
+  .company-name {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
   }
 
   .person-name {
     font-size: 1.1rem;
+  }
+
+  .person-position {
+    font-size: 0.9rem;
   }
 
   .contact-info {
@@ -106,7 +255,31 @@
   }
 
   .company-logo {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 120px;
+  }
+}
+
+/* Ajuste especial para orientación horizontal en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .row.g-0 {
+    flex-direction: row;
+  }
+
+  .col-md-4 {
+    width: 40%;
+  }
+
+  .col-md-8 {
+    width: 60%;
+  }
+
+  .company-logo {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .company-name {
+    font-size: 1.3rem;
+    margin-top: 0;
   }
 }
